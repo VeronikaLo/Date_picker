@@ -33,13 +33,13 @@ class _DatePickerState extends State<DatePicker> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children:  [
-          const Text('DatePicker'),
+          Text('DatePicker', style: Theme.of(context).textTheme.headline1,),
           const SizedBox(height: 50),
-          Text('${date.day}/ ${date.month}/ ${date.year}'),
+          Text('${date.day}/ ${date.month}/ ${date.year}', style: Theme.of(context).textTheme.headline3,),
           const SizedBox(height: 70,),
           ElevatedButton(
             onPressed: _pickDate, 
-            child: const Text('Select Date'))
+            child: Text('Select Date', style: Theme.of(context).textTheme.button,))
         ],
       ),
     ),

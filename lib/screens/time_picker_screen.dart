@@ -34,13 +34,13 @@ class _TimePickerState extends State<TimePicker> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text('Time Picker'),
+          Text('Time Picker', style: Theme.of(context).textTheme.headline1,),
           const SizedBox(height: 50),
-          Text('$hours : $minutes'),
+          Text('$hours : $minutes', style: Theme.of(context).textTheme.headline3,),
           const SizedBox(height: 70,),
           ElevatedButton(
             onPressed: _pickTime, 
-            child: const Text('Select Time'))
+            child: Text('Select Time', style: Theme.of(context).textTheme.button,))
         ],
       ),
     ),
