@@ -17,14 +17,14 @@ class _DatePickerState extends State<DatePicker> {
       lastDate: DateTime(2100));
 
       if(newDate !=null){ // OK option by Dialog
-        setState(() {
-        date = newDate;
-      });
+        setState(() => date = newDate);
       } else {  //Cancel option by Dialog
         return;
       }
       
   }
+
+  
 
   @override
   Widget build(BuildContext context) {

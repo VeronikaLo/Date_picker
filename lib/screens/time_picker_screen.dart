@@ -19,9 +19,7 @@ class _TimePickerState extends State<TimePicker> {
       );
 
       if(newTime !=null){ // OK option by Dialog
-        setState(() {
-        time = newTime;
-      });
+        setState(() => time = newTime);
       } else {  //Cancel option by Dialog
         return;
       }
@@ -29,8 +27,8 @@ class _TimePickerState extends State<TimePicker> {
   }
   @override
   Widget build(BuildContext context) {
-    final hours = time.hour.toString().padLeft(2,'0');
-    final minutes = time.minute.toString().padLeft(2,'0');
+    final hours = time.hour.toString().padLeft(2,'0'); //to ajust hours if we have only 1 digit chosen (under10)
+    final minutes = time.minute.toString().padLeft(2,'0'); //to ajust minutes if we have only 1 digit chosen (under10)
     return  Scaffold(
       body: Center(
       child: Column(

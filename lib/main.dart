@@ -1,3 +1,4 @@
+import 'package:date/screens/date_and_time_screen.dart';
 import 'package:date/screens/date_picker_screen.dart';
 import 'package:date/screens/range_screen.dart';
 import 'package:date/screens/time_picker_screen.dart';
@@ -34,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return  DefaultTabController(
-      length: 3, 
+      length: 4, 
       child: Scaffold(
         appBar: AppBar( 
           title: const Text('Date/ Time/ Range'),
@@ -43,12 +44,14 @@ class _MyHomePageState extends State<MyHomePage> {
             tabs: [
               Tab(icon: Icon(Icons.calendar_month_rounded)),
               Tab(icon: Icon(Icons.alarm_add_rounded)),
+              Tab(icon: Icon(Icons.add_alert_rounded)),
               Tab(icon: Icon(Icons. calendar_today_rounded)),
             ]), ) ,
         body: const TabBarView(
           children: [
             DatePicker(),
             TimePicker(),
+            DateAndTime(),
             RangePicker(),
           ]),
       ));
