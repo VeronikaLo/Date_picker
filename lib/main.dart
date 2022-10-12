@@ -18,6 +18,26 @@ class MyApp extends StatelessWidget {
       title: 'Date/Time/Range',
       theme: ThemeData(
         primarySwatch:  Colors.cyan,
+        textTheme:  const TextTheme(
+          headline1: TextStyle( // headline
+            fontSize: 24,
+            fontWeight: FontWeight.w600,
+            color: Colors.cyan,
+          ),
+          headline2: TextStyle( // appBar
+            fontSize: 22,
+            fontWeight: FontWeight.w600,
+            color: Colors.white,
+          ),
+          headline3: TextStyle(
+            fontSize: 20,
+            color: Colors.black,
+          ),
+          button: TextStyle(  // button
+            fontSize: 20,
+            color: Colors.white,
+          ),
+        ),   
       ),
       home: const MyHomePage(),
     );
@@ -38,14 +58,14 @@ class _MyHomePageState extends State<MyHomePage> {
       length: 4, 
       child: Scaffold(
         appBar: AppBar( 
-          title: const Text('Date/ Time/ Range'),
+          title: Text('Date/ Time/ Range', style: Theme.of(context).textTheme.headline2,),
           centerTitle: true,
           bottom: const TabBar(
             tabs: [
-              Tab(icon: Icon(Icons.calendar_today_rounded)),
-              Tab(icon: Icon(Icons.alarm_add_rounded)),
-              Tab(icon: Icon(Icons.add_alert_rounded)),
-              Tab(icon: Icon(Icons. date_range_rounded)),
+              Tab(icon: Icon(Icons.calendar_today_rounded, color: Colors.white,)),
+              Tab(icon: Icon(Icons.alarm_add_rounded, color: Colors.white,)),
+              Tab(icon: Icon(Icons.add_alert_rounded, color: Colors.white,)),
+              Tab(icon: Icon(Icons. date_range_rounded, color: Colors.white,)),
             ]), ) ,
         body: const TabBarView(
           children: [

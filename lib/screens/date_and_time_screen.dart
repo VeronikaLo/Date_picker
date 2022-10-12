@@ -90,34 +90,41 @@ class _DateAndTimeState extends State<DateAndTime> {
       child: Center(
         child: Column(
           children: [
-            const Text('Date and Time'),
+            Text('Date and Time', style: Theme.of(context).textTheme.headline1,),
             const SizedBox(height: 50),
             Row(
               children: [
                 Expanded(
                   child: ElevatedButton(
                             onPressed: _pickDate, 
-                            child: Text('${date.day}/ ${date.month}/ ${date.year}')),
+                            child: Text('${date.day}/ ${date.month}/ ${date.year}', 
+                            style: Theme.of(context).textTheme.button,)),
                 ),
                 const SizedBox(width: 30),
                 Expanded(
                   child: ElevatedButton(
                             onPressed: _pickTime, 
-                            child: Text('$hours : $minutes')),
+                            child: Text(
+                              '$hours : $minutes', 
+                              style: Theme.of(context).textTheme.button,)),
                 ),
               ],
             ),
             const SizedBox(height:40,),
             SizedBox(
-                  height: 60,
+                  height: 40,
                   child: ElevatedButton(
                             onPressed: _pickDateTime, 
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Text('${date.day}/ ${date.month}/ ${date.year}'),
+                                Text(
+                                  '${date.day}/ ${date.month}/ ${date.year}', 
+                                  style: Theme.of(context).textTheme.button,),
                                 const SizedBox(width:15),
-                                Text('$hours : $minutes'),
+                                Text(
+                                  '$hours : $minutes', 
+                                    style: Theme.of(context).textTheme.button,),
                               ],
                             )),
                 ),
