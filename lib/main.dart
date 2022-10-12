@@ -42,10 +42,10 @@ class _MyHomePageState extends State<MyHomePage> {
           centerTitle: true,
           bottom: const TabBar(
             tabs: [
-              Tab(icon: Icon(Icons.calendar_month_rounded)),
+              Tab(icon: Icon(Icons.calendar_today_rounded)),
               Tab(icon: Icon(Icons.alarm_add_rounded)),
               Tab(icon: Icon(Icons.add_alert_rounded)),
-              Tab(icon: Icon(Icons. calendar_today_rounded)),
+              Tab(icon: Icon(Icons. date_range_rounded)),
             ]), ) ,
         body: const TabBarView(
           children: [
